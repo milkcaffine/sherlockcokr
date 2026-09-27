@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Moved</title>
+
+  <!-- 자동으로 바로 넘어가게 하고 싶으면 아래 줄의 주석을 풀고 주소를 바꾸세요 (0 = 0초 후 이동) -->
+  <!-- <meta http-equiv="refresh" content="0; url=https://example.com"> -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --sky: #dfe7ee;
+      --ink: #1d2b3a;
+      --sign: #0b6e4f;
+      --sign-dark: #08543c;
+      --paper: #ffffff;
+      --pole: #8a96a3;
+    }
+
+    * { box-sizing: border-box; margin: 0; }
+
+    html, body { height: 100%; }
+
+    body {
+      background: var(--sky);
+      color: var(--ink);
+      font-family: system-ui, -apple-system, "Hiragino Sans", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: min(100%, 640px);
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      color: var(--ink);
+      opacity: .75;
+    }
+
+    /* 화살표 모양 표지판 */
+    .sign {
+      display: block;
+      max-width: 100%;
+      background: var(--sign);
+      color: var(--paper);
+      text-decoration: none;
+      font-family: "Unbounded", system-ui, sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.25rem, 5.5vw, 2.5rem);
+      letter-spacing: -.01em;
+      line-height: 1.15;
+      padding: .7em 2.2em .7em .9em;
+      clip-path: polygon(0 0, calc(100% - 1.2em) 0, 100% 50%, calc(100% - 1.2em) 100%, 0 100%);
+      overflow-wrap: anywhere;
+      box-shadow: inset 0 0 0 4px var(--sign), inset 0 0 0 6px var(--paper);
+      transition: background .2s, transform .2s;
+    }
+
+    .sign:hover { background: var(--sign-dark); transform: translateX(6px); }
+
+    .sign:focus-visible {
+      outline: 3px solid var(--ink);
+      outline-offset: 4px;
+    }
+
+    .pole {
+      width: 10px;
+      height: 90px;
+      margin-left: 2.2em;
+      background: var(--pole);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .sign { transition: none; }
+      .sign:hover { transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p>This site has moved. 사이트가 이사했어요.</p>
+
+    <!-- ▼ 여기 주소 두 군데만 바꾸면 돼요 (href = 실제 링크, 가운데 글자 = 화면에 보이는 글자) -->
+    <a class="sign" href="https://example.com">example.com</a>
+
+    <div class="pole" aria-hidden="true"></div>
+  </main>
+</body>
+</html>
