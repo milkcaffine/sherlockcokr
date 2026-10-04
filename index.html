@@ -1,138 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Haemin Lee. Korea-born, Tokyo-based. Editorial work, and writing after hours.">
-  <title>Haemin Lee</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Moved</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --bg: #09090b;
-      --ink: #e4e4e7;
-      --dim: #a1a1aa;
-      --faint: #71717a;
-      --line: #27272a;
+      --sky: #dfe7ee;
+      --ink: #1d2b3a;
+      --sign: #0b6e4f;
+      --sign-dark: #08543c;
+      --paper: #ffffff;
+      --pole: #8a96a3;
     }
+
     * { box-sizing: border-box; margin: 0; }
-    html, body { background: var(--bg); color: var(--ink); }
+
+    html, body { height: 100%; }
+
     body {
-      font-family: "IBM Plex Sans", "Noto Sans KR", system-ui, sans-serif;
-      font-size: 17px;
-      line-height: 1.65;
-      padding: 72px 24px 48px;
+      background: var(--sky);
+      color: var(--ink);
+      font-family: system-ui, -apple-system, "Hiragino Sans", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      display: grid;
+      place-items: center;
+      padding: 24px;
     }
-    main { width: min(100%, 38rem); margin: 0 auto; }
-    h1 {
-      font-weight: 500;
-      font-size: 1.75rem;
-      letter-spacing: -0.02em;
-    }
-    .lede {
-      margin-top: 8px;
-      color: var(--dim);
-    }
-    .links {
+
+    main {
       display: flex;
-      gap: 18px;
-      margin-top: 22px;
-      font-size: 0.95rem;
+      flex-direction: column;
+      align-items: flex-start;
+      width: min(100%, 640px);
     }
-    a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); }
-    a:hover { border-bottom-color: var(--ink); }
-    section { margin-top: 56px; }
-    h2 {
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--faint);
-      margin-bottom: 16px;
+
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      color: var(--ink);
+      opacity: .75;
     }
-    p + p { margin-top: 12px; }
-    .row {
-      padding: 16px 0;
-      border-top: 1px solid var(--line);
+
+    .sign {
+      display: block;
+      max-width: 100%;
+      background: var(--sign);
+      color: var(--paper);
+      text-decoration: none;
+      font-family: "Unbounded", system-ui, sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.25rem, 5.5vw, 2.5rem);
+      letter-spacing: -.01em;
+      line-height: 1.15;
+      padding: .7em 2.2em .7em .9em;
+      clip-path: polygon(0 0, calc(100% - 1.2em) 0, 100% 50%, calc(100% - 1.2em) 100%, 0 100%);
+      overflow-wrap: anywhere;
+      box-shadow: inset 0 0 0 4px var(--sign), inset 0 0 0 6px var(--paper);
+      transition: background .2s, transform .2s;
     }
-    .row:last-child { border-bottom: 1px solid var(--line); }
-    .when {
-      color: var(--faint);
-      font-size: 0.85rem;
-      margin-bottom: 2px;
+
+    .sign:hover { background: var(--sign-dark); transform: translateX(6px); }
+
+    .sign:focus-visible {
+      outline: 3px solid var(--ink);
+      outline-offset: 4px;
     }
-    .role { font-weight: 500; }
-    .place { color: var(--dim); }
-    ul {
-      margin: 8px 0 0;
-      padding: 0;
-      list-style: none;
-      color: var(--dim);
+
+    .pole {
+      width: 10px;
+      height: 90px;
+      margin-left: 2.2em;
+      background: var(--pole);
     }
-    li + li { margin-top: 4px; }
-    footer {
-      margin-top: 64px;
-      color: var(--faint);
-      font-size: 0.85rem;
+
+    @media (prefers-reduced-motion: reduce) {
+      .sign { transition: none; }
+      .sign:hover { transform: none; }
     }
   </style>
 </head>
 <body>
   <main>
-    <h1>Haemin Lee</h1>
-    <p class="lede">Korea-born, Tokyo-based. Editorial work by day. Writing after.</p>
-    <p class="links">
-      <a href="https://marsko.art">marsko.art</a>
-      <a href="https://www.linkedin.com/in/haeminl">LinkedIn</a>
-      <a href="https://x.com/marsko">X</a>
-    </p>
-
-    <section>
-      <h2>Now</h2>
-      <p>Korean editorial for Google Play, via Vaco, since 2022. Translations, tone, and QA, with the marketing and go-to-market side.</p>
-      <p>Before that, multilingual video review for YouTube, via Adecco, 2021–2022. Earlier still, package and print design. Art major.</p>
-    </section>
-
-    <section>
-      <h2>Work</h2>
-      <div class="row">
-        <p class="when">2022 — present</p>
-        <p class="role">Content and multilingual communications</p>
-        <p class="place">Google Play · via Vaco</p>
-        <ul>
-          <li>Korean editorial, almost four years in the same seat.</li>
-          <li>Translation, review of other translators, Play tone of voice.</li>
-          <li>With marketing managers on go-to-market work.</li>
-        </ul>
-      </div>
-      <div class="row">
-        <p class="when">2021 — 2022</p>
-        <p class="role">Content moderator</p>
-        <p class="place">YouTube · via Adecco</p>
-        <ul>
-          <li>Multilingual video review.</li>
-        </ul>
-      </div>
-      <div class="row">
-        <p class="when">Earlier</p>
-        <p class="role">Graphics and print</p>
-        <p class="place">Package, book, and print design</p>
-      </div>
-    </section>
-
-    <section>
-      <h2>Languages</h2>
-      <p>Korean, native. English, working — TOEIC 895. Japanese, JLPT N1.</p>
-    </section>
-
-    <section>
-      <h2>After hours</h2>
-      <p>Dark novels and tanka, filed under Marsko. Caffenol black-and-white on the walk home.</p>
-      <p><a href="https://marsko.art">marsko.art</a></p>
-    </section>
-
-    <footer>Haemin Lee</footer>
+    <p>>>></p>
+    <a class="sign" href="https://sherlock.kr">sherlock.kr</a>
+    <div class="pole" aria-hidden="true"></div>
   </main>
 </body>
 </html>
